@@ -1,0 +1,6 @@
+[25/10/26, 10:15:30] +91 98765 43210: Hey, did you submit the mini project report?
+[25/10/26, 10:16:02] Ankit Mishra: Yes, uploaded it for review.
+[25/10/26, 10:17:15] +91 98765 43210: Why did you even bother? You are completely useless at this.
+[25/10/26, 10:18:00] Ankit Mishra: Please keep your feedback professional.
+[25/10/26, 10:19:42] +91 98765 43210: Get out of this team before I report you!
+

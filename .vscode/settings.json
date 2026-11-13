@@ -1,0 +1,26 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.test.defaultConfig": "CyberGuardAI_Automation_Testing_Suite",
+    "java.test.report.showAfterExecution": "always",
+    "maven.view": "hierarchical",
+    "maven.terminal.useJavaHome": true,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "pom.xml": "testng.xml, README.md, run_tests.bat, start_app.bat",
+        "*.js": "$(capture).js.map"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/target/classes": true,
+        "**/target/test-classes": true
+    },
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true
+}

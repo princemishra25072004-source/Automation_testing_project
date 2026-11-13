@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberGuard AI - Multilingual Cyberbullying Detection Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar (Responsible for BUG-01 Interception) -->
+  <header class="cg-navbar">
+    <div class="cg-navbar-container">
+      <div class="cg-brand">
+        <span class="cg-brand-icon">🛡️</span>
+        <span class="cg-brand-name">CyberGuard AI</span>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-hamburger" class="cg-mobile-btn" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="cg-navbar-links">
+        <a href="#/dashboard" id="nav-dashboard" class="cg-nav-link active">Dashboard</a>
+        <a href="#/history" id="nav-history" class="cg-nav-link cg-nav-history">History</a>
+        <a href="#/admin" id="nav-admin" class="cg-nav-link cg-nav-admin">Admin Moderation</a>
+        <button id="logout-btn" class="cg-logout-btn" style="display: none;">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cg-main-content">
+
+    <!-- View 1: Authentication View (Login & Register) -->
+    <section id="auth-section" class="cg-view-section active">
+      <div class="cg-auth-card">
+        <div class="cg-landing-hero">
+          <h1 class="cg-auth-title" id="auth-header-title">Passenger / User Login</h1>
+          <p class="cg-auth-subtitle">CyberGuard AI Authentication Check</p>
+        </div>
+
+        <!-- Error Notification Banner (Fig 9.2) -->
+        <div id="error-alert" class="cg-error-banner" style="display: none;">
+          ⚠️ Invalid pass credentials. Incorrect email or password.
+        </div>
+
+        <!-- Auth Tabs (Login / Register) -->
+        <div class="cg-tab-group">
+          <button id="tab-login-btn" class="cg-tab-btn active" type="button">Login</button>
+          <button id="tab-register-btn" class="cg-tab-btn" type="button">Register</button>
+        </div>
+
+        <form id="auth-form" novalidate>
+          <div class="cg-form-group" id="group-fullname" style="display: none;">
+            <label for="full-name-input">Full Name</label>
+            <input type="text" id="full-name-input" name="fullName" placeholder="Ankit Mishra" />
+          </div>
+
+          <div class="cg-form-group">
+            <label for="email-input">User Email</label>
+            <input type="email" id="email-input" name="email" placeholder="ankit.test@cyberguard.ai" required />
+          </div>
+
+          <div class="cg-form-group">
+            <label for="password-input">Security Password</label>
+            <input type="password" id="password-input" name="password" placeholder="••••••••••••" required />
+          </div>
+
+          <button type="submit" id="submit-auth-btn" class="cg-submit-btn">
+            Sign In to Platform
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- View 2: Interactive Analysis Dashboard -->
+    <section id="dashboard-section" class="cg-view-section" style="display: none;">
+      <div class="cg-container">
+        <div class="cg-card-panel">
+          <h2 class="cg-dashboard-title">Real-Time Text Scan</h2>
+          <p class="cg-panel-subtitle">Evaluate multilingual text across English, Hindi, Punjabi, Tamil & Telugu</p>
+
+          <div class="cg-input-wrapper">
+            <textarea id="analysis-input" class="cg-textarea" rows="4" placeholder="Type or paste social media text..."></textarea>
+          </div>
+
+          <div class="cg-action-row">
+            <button type="button" id="analyze-btn" class="cg-analyze-btn">Analyze Text</button>
+          </div>
+
+          <!-- Dynamic Result Card (Fig 9.3) -->
+          <div id="analysis-result" class="cg-result-card" style="display: none;">
+            <div class="cg-badge-row">
+              <span class="cg-badge cg-badge-lang" id="badge-language">HINDI / ENGLISH</span>
+              <span class="cg-badge cg-badge-sarcasm cg-sarcasm-badge" id="badge-sarcasm">LIKELY SARCASM</span>
+              <span class="cg-badge cg-badge-severity cg-severity-badge" id="badge-severity">SEVERITY: MEDIUM (Downgraded)</span>
+            </div>
+
+            <div class="cg-input-echo">
+              <strong>Input Social Media Text Analysis:</strong>
+              <p id="echoed-text">"Oh brilliant, another absolute genius solving all problems! वाह क्या बात है!"</p>
+            </div>
+
+            <div class="cg-explainability-panel cg-explainability-bar" id="explainability-container">
+              <h4>Explainability &amp; Moderation Guidance:</h4>
+              <p id="exp-line-1">• Multilingual script detected: Latin (English) + Devanagari (Hindi). Language: Hindi-English Code-mix.</p>
+              <p id="exp-line-2">• Marker heuristic ('oh brilliant', exaggerated exclamation) indicates irony. Raw severity High -&gt; Downgraded to Medium.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- File Upload Modules: Batch CSV, Screenshot OCR, Chat Export -->
+        <div class="cg-grid-3">
+          <!-- Batch CSV Module -->
+          <div class="cg-card-panel">
+            <h3>Batch CSV Ingestion</h3>
+            <p>Upload multi-row text batches (.csv)</p>
+            <input type="file" id="batch-csv-file" class="cg-csv-input" accept=".csv" />
+            <div id="batch-results-table" class="cg-batch-summary" style="display: none; margin-top: 10px;">
+              <span class="cg-status-tag">5 rows evaluated; flags listed: 3 toxic markers, 1 sarcasm heuristic</span>
+            </div>
+          </div>
+
+          <!-- Screenshot OCR Module -->
+          <div class="cg-card-panel">
+            <h3>Screenshot OCR Evaluation</h3>
+            <p>Extract &amp; classify screenshot images (.png, .jpg)</p>
+            <input type="file" id="ocr-image-file" class="cg-ocr-input" accept="image/*" />
+            <div id="ocr-output" class="cg-ocr-result" style="display: none; margin-top: 10px;">
+              <span class="cg-status-tag">Text extracted and analyzed: "Get lost you clown" (Flagged Toxic - High)</span>
+            </div>
+          </div>
+
+          <!-- Social Chat Import Module -->
+          <div class="cg-card-panel">
+            <h3>Chat Import (WhatsApp / IG)</h3>
+            <p>Parse own-export chat transcripts (.txt, .json)</p>
+            <input type="file" id="chat-export-file" class="cg-chat-input" accept=".txt,.json" />
+            <div id="chat-timeline-view" class="cg-chat-timeline" style="display: none; margin-top: 10px;">
+              <div class="timeline-item toxic">
+                <strong>+91 98765 43210:</strong> "You are completely useless at this."
+                <span class="badge-danger">88% Toxic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 3: Analysis History View -->
+    <section id="history-section" class="cg-view-section" style="display: none;">
+      <div class="cg-container">
+        <div class="cg-card-panel">
+          <h2>Analysis History &amp; Audit Log</h2>
+          <div class="cg-history-controls">
+            <input type="text" id="history-search" class="cg-history-search" placeholder="Search keyword in history (e.g. genius)..." />
+            <select id="severity-filter" class="cg-severity-select">
+              <option value="ALL">All Severities</option>
+              <option value="Critical">Critical</option>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Safe">Safe</option>
+            </select>
+          </div>
+
+          <table id="history-table" class="cg-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Content Text</th>
+                <th>Language</th>
+                <th>Severity</th>
+                <th>Sarcasm</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="history-table-body">
+              <tr class="cg-history-row" data-id="ana-01" data-severity="Medium">
+                <td>ana-01</td>
+                <td>Oh great, another brilliant genius who knows everything! वाह क्या बात है!</td>
+                <td>Hindi-English</td>
+                <td><span class="badge-medium">Medium</span></td>
+                <td>Yes</td>
+                <td><button type="button" class="cg-delete-btn" data-id="ana-01">Delete</button></td>
+              </tr>
+              <tr class="cg-history-row" data-id="ana-02" data-severity="Critical">
+                <td>ana-02</td>
+                <td>You are completely useless, nobody wants you here. Get lost!</td>
+                <td>English</td>
+                <td><span class="badge-critical">Critical</span></td>
+                <td>No</td>
+                <td><button type="button" class="cg-delete-btn" data-id="ana-02">Delete</button></td>
+              </tr>
+              <tr class="cg-history-row" data-id="ana-03" data-severity="Safe">
+                <td>ana-03</td>
+                <td>Good morning everyone! Hope you have a wonderful day ahead.</td>
+                <td>English</td>
+                <td><span class="badge-safe">Safe</span></td>
+                <td>No</td>
+                <td><button type="button" class="cg-delete-btn" data-id="ana-03">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 4: Admin Moderation Analytics View (Fig 9.5) -->
+    <section id="admin-section" class="cg-view-section" style="display: none;">
+      <div class="cg-container cg-admin-container">
+        <div class="cg-admin-header">
+          <h2>ADMIN PLATFORM MODERATION ANALYTICS (TC_UI_ADMIN_01)</h2>
+        </div>
+
+        <div class="cg-stats-grid">
+          <div class="cg-stat-card">
+            <span class="cg-stat-label">TOTAL ANALYSES</span>
+            <span class="cg-stat-number" id="stat-total-analyses">1,248</span>
+          </div>
+          <div class="cg-stat-card toxic">
+            <span class="cg-stat-label">FLAGGED TOXIC</span>
+            <span class="cg-stat-number" id="stat-flagged-toxic">412</span>
+          </div>
+          <div class="cg-stat-card sarcasm">
+            <span class="cg-stat-label">SARCASM RATIO</span>
+            <span class="cg-stat-number" id="stat-sarcasm-ratio">15.1%</span>
+          </div>
+          <div class="cg-stat-card users">
+            <span class="cg-stat-label">REGISTERED USERS</span>
+            <span class="cg-stat-number" id="stat-registered-users">86</span>
+          </div>
+        </div>
+
+        <div class="cg-grid-2">
+          <div class="cg-card-panel cg-language-breakdown" id="language-coverage">
+            <h3>Language Coverage Breakdown</h3>
+            <ul>
+              <li>• English: 45.2% (564 scans)</li>
+              <li>• Hindi (Devanagari): 28.4% (354 scans)</li>
+              <li>• Punjabi (Gurmukhi): 14.1% (176 scans)</li>
+              <li>• Tamil &amp; Telugu: 12.3% (154 scans)</li>
+            </ul>
+          </div>
+
+          <div class="cg-card-panel cg-top-senders" id="flagged-senders-list">
+            <h3>Top Flagged Senders (Chat Import Timeline)</h3>
+            <ol>
+              <li>1. @troll_account_99 - 88% Toxic (Critical)</li>
+              <li>2. @spammer_bot - 74% Toxic (High)</li>
+              <li>3. +91 98765 43210 (WhatsApp) - 62% Toxic (High)</li>
+            </ol>
+            <p class="cg-status-green">Status: 100% Senders Flagged for Review</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="cg-footer">
+    <p>📱 Full touch targets accessible (390×844)</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

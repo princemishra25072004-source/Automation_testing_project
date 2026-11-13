@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch CyberGuard AI Platform (AUT)",
+            "program": "${workspaceFolder}/app/start_cyberguard_app.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Execute All 33 Automated Tests",
+            "program": "${workspaceFolder}/test_runner.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "TestNG: Current Test Class",
+            "request": "launch",
+            "mainClass": "${file}",
+            "projectName": "cyberguard-automation-testing"
+        },
+        {
+            "type": "java",
+            "name": "TestNG: Entire Suite (testng.xml)",
+            "request": "launch",
+            "mainClass": "org.testng.TestNG",
+            "args": "testng.xml",
+            "projectName": "cyberguard-automation-testing"
+        }
+    ]
+}
+

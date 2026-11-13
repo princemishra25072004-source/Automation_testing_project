@@ -1,0 +1,11 @@
+target/
+node_modules/
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+bin/
+*.log
+.DS_Store
+Thumbs.db

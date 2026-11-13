@@ -1,0 +1,23 @@
+{
+  "conversation_id": "ig_conv_9921",
+  "platform": "Instagram Direct",
+  "participants": ["ankit_mishra", "troll_account_99"],
+  "messages": [
+    {
+      "sender": "troll_account_99",
+      "timestamp": "2026-10-25T14:22:10Z",
+      "text": "Nice post you clown, go delete your account."
+    },
+    {
+      "sender": "ankit_mishra",
+      "timestamp": "2026-10-25T14:25:30Z",
+      "text": "Stop harassing me."
+    },
+    {
+      "sender": "troll_account_99",
+      "timestamp": "2026-10-25T14:26:05Z",
+      "text": "Or what? Nobody cares about your useless complaints."
+    }
+  ]
+}
+

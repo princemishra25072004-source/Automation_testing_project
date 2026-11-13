@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <rect width="100%" height="100%" fill="#1e1e1e" rx="8"/>
+  <circle cx="25" cy="25" r="7" fill="#ff5f56"/>
+  <circle cx="45" cy="25" r="7" fill="#ffbd2e"/>
+  <circle cx="65" cy="25" r="7" fill="#27c93f"/>
+  <text x="90" y="30" fill="#a0a0a0" font-family="Consolas, monospace" font-size="14">Visual Studio Code - Terminal (Test Runner for Java)</text>
+  <line x1="0" y1="50" x2="900" y2="50" stroke="#333" stroke-width="1"/>
+  <text x="25" y="80" fill="#f87171" font-family="Consolas, monospace" font-size="13">[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0</text>
+  <text x="25" y="110" fill="#e2e8f0" font-family="Consolas, monospace" font-size="13">Test set: com.cyberguard.functional.TextAnalysisTest</text>
+  <text x="25" y="145" fill="#ef4444" font-weight="bold" font-family="Consolas, monospace" font-size="13">FAILURE: testAnalyzeTextWithSarcasm (TC_UI_ANA_02)</text>
+  <text x="25" y="175" fill="#fca5a5" font-family="Consolas, monospace" font-size="12">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element</text>
+  <text x="25" y="195" fill="#fca5a5" font-family="Consolas, monospace" font-size="12">&lt;button class="cg-analyze-btn"&gt;Analyze Text&lt;/button&gt; is not clickable at point (640, 412).</text>
+  <text x="25" y="215" fill="#fca5a5" font-family="Consolas, monospace" font-size="12">Other element would receive the click: &lt;div class="cg-navbar" style="position: sticky; ...&gt;</text>
+  <text x="25" y="245" fill="#94a3b8" font-family="Consolas, monospace" font-size="12">  at com.cyberguard.pages.DashboardPage.clickAnalyze(DashboardPage.java:54)</text>
+  <text x="25" y="265" fill="#94a3b8" font-family="Consolas, monospace" font-size="12">  at com.cyberguard.functional.TextAnalysisTest.testAnalyzeTextWithSarcasm(TextAnalysisTest.java:42)</text>
+</svg>

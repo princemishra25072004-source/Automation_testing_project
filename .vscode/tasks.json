@@ -1,0 +1,93 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "1. Start CyberGuard AI Platform (AUT)",
+            "type": "shell",
+            "command": "node app/start_cyberguard_app.js",
+            "isBackground": true,
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            }
+        },
+        {
+            "label": "2. Run Integrated Test Runner (All 33 Tests)",
+            "type": "shell",
+            "command": "node test_runner.js",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true
+            }
+        },
+        {
+            "label": "3. Run Full TestNG Suite via Maven",
+            "type": "shell",
+            "command": "mvn clean test",
+            "group": "test",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true
+            }
+        },
+        {
+            "label": "4. Run API & Database Suite (Maven)",
+            "type": "shell",
+            "command": "mvn test -Dtest=CyberGuardApiTest,DatabaseIntegrationTest",
+            "group": "test",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "5. Run UI Functional Suite (Chrome / Chromium)",
+            "type": "shell",
+            "command": "mvn test -Dtest=AuthenticationTest,TextAnalysisTest,HistoryAndAdminTest",
+            "group": "test",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "6. Run Responsive & Cross-Browser Tests",
+            "type": "shell",
+            "command": "mvn test -Dtest=CrossBrowserAndResponsiveTest",
+            "group": "test",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "7. Run Apache JMeter Load Tests",
+            "type": "shell",
+            "command": "jmeter -n -t jmeter/CyberGuard_Load_Test_Plan.jmx -l jmeter/load_results.jtl",
+            "group": "test",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
+

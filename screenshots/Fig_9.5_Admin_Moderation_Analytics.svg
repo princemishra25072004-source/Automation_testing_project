@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="100%" height="100%" fill="#0a0f1d" rx="8"/>
+  <text x="30" y="40" fill="#e2e8f0" font-family="sans-serif" font-weight="bold" font-size="16">ADMIN PLATFORM MODERATION ANALYTICS (TC_UI_ADMIN_01)</text>
+
+  <!-- Stat Cards -->
+  <rect x="30" y="65" width="195" height="85" fill="#111c38" rx="6"/>
+  <text x="45" y="90" fill="#94a3b8" font-family="sans-serif" font-size="11">TOTAL ANALYSES</text>
+  <text x="45" y="130" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="26">1,248</text>
+
+  <rect x="245" y="65" width="195" height="85" fill="#111c38" rx="6"/>
+  <text x="260" y="90" fill="#94a3b8" font-family="sans-serif" font-size="11">FLAGGED TOXIC</text>
+  <text x="260" y="130" fill="#f87171" font-family="sans-serif" font-weight="bold" font-size="26">412</text>
+
+  <rect x="460" y="65" width="195" height="85" fill="#111c38" rx="6"/>
+  <text x="475" y="90" fill="#94a3b8" font-family="sans-serif" font-size="11">SARCASM RATIO</text>
+  <text x="475" y="130" fill="#fbbf24" font-family="sans-serif" font-weight="bold" font-size="26">15.1%</text>
+
+  <rect x="675" y="65" width="195" height="85" fill="#111c38" rx="6"/>
+  <text x="690" y="90" fill="#94a3b8" font-family="sans-serif" font-size="11">REGISTERED USERS</text>
+  <text x="690" y="130" fill="#34d399" font-family="sans-serif" font-weight="bold" font-size="26">86</text>
+
+  <!-- Panels -->
+  <rect x="30" y="175" width="410" height="210" fill="#111c38" rx="6"/>
+  <text x="50" y="205" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="14">Language Coverage Breakdown</text>
+  <text x="50" y="240" fill="#cbd5e1" font-family="sans-serif" font-size="13">• English: 45.2% (564 scans)</text>
+  <text x="50" y="270" fill="#cbd5e1" font-family="sans-serif" font-size="13">• Hindi (Devanagari): 28.4% (354 scans)</text>
+  <text x="50" y="300" fill="#cbd5e1" font-family="sans-serif" font-size="13">• Punjabi (Gurmukhi): 14.1% (176 scans)</text>
+  <text x="50" y="330" fill="#cbd5e1" font-family="sans-serif" font-size="13">• Tamil &amp; Telugu: 12.3% (154 scans)</text>
+
+  <rect x="460" y="175" width="410" height="210" fill="#111c38" rx="6"/>
+  <text x="480" y="205" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="14">Top Flagged Senders (Chat Import Timeline)</text>
+  <text x="480" y="240" fill="#f87171" font-family="sans-serif" font-size="13">1. @troll_account_99 - 88% Toxic (Critical)</text>
+  <text x="480" y="270" fill="#fb923c" font-family="sans-serif" font-size="13">2. @spammer_bot - 74% Toxic (High)</text>
+  <text x="480" y="300" fill="#fbbf24" font-family="sans-serif" font-size="13">3. +91 98765 43210 (WhatsApp) - 62% Toxic (High)</text>
+  <text x="480" y="340" fill="#34d399" font-family="sans-serif" font-size="12">Status: 100% Senders Flagged for Review</text>
+</svg>

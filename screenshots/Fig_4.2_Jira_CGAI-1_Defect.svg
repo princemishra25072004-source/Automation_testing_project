@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="100%" height="100%" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="8"/>
+  <rect width="100%" height="45" fill="#0052cc" rx="8 8 0 0"/>
+  <text x="25" y="28" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="bold" font-size="16">Jira Software / CyberGuard AI / CGAI-1</text>
+  <text x="25" y="80" fill="#172b4d" font-family="-apple-system, sans-serif" font-weight="bold" font-size="18">CGAI-1: 'Analyze Text' button click intercepted on candidate analysis view</text>
+  
+  <rect x="25" y="95" width="80" height="24" fill="#36b37e" rx="3"/>
+  <text x="35" y="112" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="12">Status: Done</text>
+  <text x="120" y="112" fill="#5e6c84" font-family="sans-serif" font-size="13">Type: <tspan font-weight="bold" fill="#ff5630">Bug</tspan></text>
+  <text x="200" y="112" fill="#5e6c84" font-family="sans-serif" font-size="13">Priority: <tspan font-weight="bold" fill="#ff5630">High</tspan></text>
+  <text x="300" y="112" fill="#5e6c84" font-family="sans-serif" font-size="13">Severity: <tspan font-weight="bold" fill="#ff5630">Major</tspan></text>
+
+  <line x1="25" y1="135" x2="875" y2="135" stroke="#ebecf0" stroke-width="1"/>
+  
+  <text x="25" y="160" fill="#172b4d" font-family="sans-serif" font-weight="bold" font-size="14">Description:</text>
+  <text x="25" y="185" fill="#42526e" font-family="sans-serif" font-size="13">Summary: Edit / Analyze action button click intercepted on dashboard</text>
+  <text x="25" y="205" fill="#42526e" font-family="sans-serif" font-size="13">Environment: Windows 11, Java 17, Selenium WebDriver 4.28.1, Chrome 156</text>
+  <text x="25" y="225" fill="#42526e" font-family="sans-serif" font-size="13">Steps to Reproduce: 1. Log in with test credentials and route to /dashboard. 2. Enter multilingual text. 3. Click Analyze button.</text>
+  <text x="25" y="245" fill="#42526e" font-family="sans-serif" font-size="13">Actual: ElementClickInterceptedException raised by Selenium WebDriver.</text>
+  <text x="25" y="265" fill="#42526e" font-family="sans-serif" font-size="13">Expected: Submission executes and model analysis cards render cleanly.</text>
+
+  <rect x="620" y="145" width="250" height="180" fill="#f4f5f7" rx="4"/>
+  <text x="635" y="170" fill="#172b4d" font-family="sans-serif" font-weight="bold" font-size="13">People &amp; Details</text>
+  <text x="635" y="195" fill="#5e6c84" font-family="sans-serif" font-size="12">Assignee: Ankit (25MCA20069)</text>
+  <text x="635" y="220" fill="#5e6c84" font-family="sans-serif" font-size="12">Reporter: Quality Lead / Ast. Prof</text>
+  <text x="635" y="245" fill="#5e6c84" font-family="sans-serif" font-size="12">Component: UI Automation / Selenium</text>
+  <text x="635" y="270" fill="#5e6c84" font-family="sans-serif" font-size="12">Resolution: <tspan fill="#00875a" font-weight="bold">Fixed (POM Scroll Sync)</tspan></text>
+</svg>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CyberGuardAI_Automation_Testing_Suite" verbose="1">
+
+    <listeners>
+        <listener class-name="com.cyberguard.utils.TestListener"/>
+    </listeners>
+
+    <!-- Suite 1: REST API & Database Contract Tests -->
+    <test name="CyberGuard_API_and_Database_Tests">
+        <classes>
+            <class name="com.cyberguard.api.CyberGuardApiTest"/>
+            <class name="com.cyberguard.database.DatabaseIntegrationTest"/>
+        </classes>
+    </test>
+
+    <!-- Suite 2: UI Functional Tests (Chrome / Chromium) -->
+    <test name="CyberGuard_UI_Functional_Tests_Chromium">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.cyberguard.functional.AuthenticationTest"/>
+            <class name="com.cyberguard.functional.TextAnalysisTest"/>
+            <class name="com.cyberguard.functional.HistoryAndAdminTest"/>
+        </classes>
+    </test>
+
+    <!-- Suite 3: Cross Browser & Responsive Viewport Tests -->
+    <test name="CyberGuard_CrossBrowser_and_Responsive_Tests">
+        <classes>
+            <class name="com.cyberguard.crossbrowser.CrossBrowserAndResponsiveTest"/>
+        </classes>
+    </test>
+
+</suite>

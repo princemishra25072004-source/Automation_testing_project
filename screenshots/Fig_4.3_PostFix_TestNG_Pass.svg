@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <rect width="100%" height="100%" fill="#1e1e1e" rx="8"/>
+  <circle cx="25" cy="25" r="7" fill="#ff5f56"/>
+  <circle cx="45" cy="25" r="7" fill="#ffbd2e"/>
+  <circle cx="65" cy="25" r="7" fill="#27c93f"/>
+  <text x="90" y="30" fill="#a0a0a0" font-family="Consolas, monospace" font-size="14">Visual Studio Code - Test Runner for Java (Execution Post-Fix)</text>
+  <line x1="0" y1="50" x2="900" y2="50" stroke="#333" stroke-width="1"/>
+  <text x="25" y="80" fill="#e2e8f0" font-family="Consolas, monospace" font-size="13">Running Default Suite (com.cyberguard.functional.TextAnalysisTest)</text>
+  <text x="25" y="105" fill="#34d399" font-family="Consolas, monospace" font-size="13">[PASS] testAnalyzeEnglishHateSpeech (TC_UI_ANA_01) [1,420 ms]</text>
+  <text x="25" y="130" fill="#34d399" font-family="Consolas, monospace" font-size="13">[PASS] testAnalyzeTextWithSarcasm (TC_UI_ANA_02) [2,180 ms] - POST FIX VERIFIED</text>
+  <line x1="25" y1="145" x2="875" y2="145" stroke="#333" stroke-width="1"/>
+  <text x="25" y="170" fill="#38bdf8" font-family="Consolas, monospace" font-size="13">Default Suite | Total tests run: 2, Passes: 2, Failures: 0, Skips: 0</text>
+</svg>
